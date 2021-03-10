@@ -133,7 +133,7 @@
         }
         let today = new Date()
         var payload = {
-            "text": "[" + team + "] " + "[PNU] " + name + " " + today.getFullYear() + '-' + today.getMonth() + '-' + today.getDay() + " " + today.getHours() + ":" + today.getMinutes(),
+            "text": "[" + team + "] " + "[PNU] " + name + " " + today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate() + " " + today.getHours() + ":" + today.getMinutes(),
         };
         xhr.send(JSON.stringify(payload));
     }

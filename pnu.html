@@ -97,11 +97,8 @@
 </body>
 <script>
     function submitForm(team, name) {
-        var link1 = 'https://hooks.slack.com/servi'
-        var link2 = 'ces/T017D8US99C/B01QAHU9QTH/'
-        var link3 = 'tZ9Pb4IKU0KRNqYxw5TuFW62'
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", link1+ link2+ link3, true);
+        xhr.open("POST", 'https://hooks.slack.com/services/T017D8US99C/B01QAHU9QTH/7TXxYSc22IsfalDT83JvF1', true);
 
         //Send the proper header information along with the request
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

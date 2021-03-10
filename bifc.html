@@ -15,6 +15,15 @@
             background: orange;
         }
 
+        .body {
+            margin: 0px 0px 0px 0px;
+            text-align: center;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            background: orange;
+        }
+
         .container {
             text-align: center;
             background: orange;
@@ -44,7 +53,7 @@
             width: 17%;
             height: 60px;
             margin: 10px;
-            font-size: 3vw;
+            font-size: 4vw;
             border-radius: 100px;
         }
 
@@ -66,6 +75,8 @@
 </head>
 
 <body style="font-family: arial;">
+        <div class="body" id="first">
+
     <div class="title">BIFC 출근</div>
     <div class="container">
         <h2 style="color:#3ADF00; margin-bottom: 10px;">MKT</h2>
@@ -93,11 +104,21 @@
         <button class="buttonHW" onclick="submitForm('HW', '해머')">해머</button>
         <button class="buttonHW" onclick="submitForm('HW', '맥스')">맥스</button>
     </div>
-    
+        </div>
+
+    <div class="body" id="second" style="display: none;">
+        <div class="title" style="margin-top: 200px;" id="result"></div>
+    </div>
 </body>
 <script>
     function submitForm(team, name) {
+        var display_div1 = document.getElementById("first");
+        var display_div2 = document.getElementById("second");
+        var result_name = document.getElementById("result");
 
+        display_div1.style.display = "none";
+        display_div2.style.display = "flex";
+        result_name.innerText = name + "님\n 반갑습니다."
         var xhr = new XMLHttpRequest();
         xhr.open("POST", 'https://hooks.slack.com/services/T017D8US99C/B01QAHU9QTH/7TXxYSc22IsfalDT83JvF1'+'Am', true);
 

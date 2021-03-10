@@ -90,7 +90,7 @@
         <div class="container">
             <h2 style="color:#0080FF;margin-bottom: 10px;">SW</h2>
             <button class="buttonSW" onclick="submitForm('SW', '데이빗')">데이빗</button>
-            <button class="buttonSW" onclick="submitForm('SW', '레제미')">제레미</button>
+            <button class="buttonSW" onclick="submitForm('SW', '제레미')">제레미</button>
             <button class="buttonSW" onclick="submitForm('SW', '제이든')">제이든</button>
             <button class="buttonSW" onclick="submitForm('SW', '재야')">재야</button>
             <button class="buttonSW" onclick="submitForm('SW', '조이')">조이</button>
@@ -133,7 +133,7 @@
         }
         let today = new Date()
         var payload = {
-            "text": "[" + team + "] " + "[공장] " + name + " " + today.getFullYear() + '-' + today.getMonth() + '-' + today.getDay() + " " + today.getHours() + ":" + today.getMinutes(),
+            "text": "[" + team + "] " + "[공장] " + name + " " + today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate() + " " + today.getHours() + ":" + today.getMinutes(),
         };
         xhr.send(JSON.stringify(payload));
     }
